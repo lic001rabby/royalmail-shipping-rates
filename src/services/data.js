@@ -243,79 +243,76 @@ export default class Data {
    *
    * @return {Array}
    */
-async function csvToArray(filename = '', delimiter = ',') {
-  try {
-    const fileData = await fs.promises.readFile(filename, 'utf8');
+  async csvToArray(filename = '', delimiter = ',') {
+    try {
+      const fileData = await fs.promises.readFile(filename, 'utf8');
 
-    const results = Papa.parse(fileData, {
-      delimiter,
-      header: false, // Set to true if the CSV file has headers
-    });
+      const results = Papa.parse(fileData, { delimiter, header: false });
 
-    if (results.errors.length > 0) {
-      throw new Error(`CSV parsing error: ${results.errors.join(', ')}`);
+      if (results.errors.length > 0) {
+        throw new Error(`CSV parsing error: ${results.errors.join(', ')}`);
+      }
+
+      return results.data;
+    } catch (error) {
+      throw new Error(`Unable to load the CSV file '${filename}': ${error.message}`);
+    }
+  }
+
+  setCountry(data) {
+    this._country = data;
+  }
+
+  getCountry() {
+    return this._country;
+  }
+
+  setWeightUnit(unit) {
+    this._weight_unit = unit;
+  }
+
+  getWeightUnit() {
+    return this._weight_unit;
+  }
+
+  setWeight(data) {
+    this._weight = data;
+  }
+
+  setCartTotal(value) {
+    this._cart_total = value;
+  }
+
+  getCartTotal() {
+    return this._cart_total;
+  }
+
+  setNegativeWeight(value) {
+    this._negative_weight = value;
+  }
+
+  getNegativeWeight() {
+    return this._negative_weight;
+  }
+
+  // Return the weight in grams
+  getWeight() {
+    const unit = this.getWeightUnit();
+    let weight = this._weight;
+
+    switch (unit) {
+      case 'kg':
+        // do nothing, as default royalmail value
+        break;
+      case 'lb':
+        weight *= 0.45359237;
+        break;
+      default:
+        // case 'g'
+        weight /= 1000;
+        break;
     }
 
-    return results.data;
-  } catch (error) {
-    throw new Error(`Unable to load the CSV file '${filename}': ${error.message}`);
+    return weight;
   }
-}
-
-setCountry(data) {
-  this._country = data;
-}
-
-getCountry() {
-  return this._country;
-}
-
-setWeightUnit(unit) {
-  this._weight_unit = unit;
-}
-
-getWeightUnit() {
-  return this._weight_unit;
-}
-
-setWeight(data) {
-  this._weight = data;
-}
-
-setCartTotal(value) {
-  this._cart_total = value;
-}
-
-getCartTotal() {
-  return this._cart_total;
-}
-
-setNegativeWeight(value) {
-  this._negative_weight = value;
-}
-
-getNegativeWeight() {
-  return this._negative_weight;
-}
-
-// Return the weight in grams
-getWeight() {
-  const unit = this.getWeightUnit();
-  let weight = this._weight;
-
-  switch (unit) {
-    case 'kg':
-      // do nothing, as default royalmail value
-      break;
-    case 'lb':
-      weight *= 0.45359237;
-      break;
-    default:
-      // case 'g'
-      weight /= 1000;
-      break;
-  }
-
-  return weight;
-}
 }

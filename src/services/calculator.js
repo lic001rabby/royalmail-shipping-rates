@@ -1,4 +1,7 @@
 
+import Data from "./data";
+import CalculateMethod from "./calculateMethod";
+
 function calculateMethods(countryCode, packageValue, packageWeight) {
   const sortedCountryCodeMethods = [
     getCountryCodeData(countryCode, mappingCountryToZone)
@@ -402,8 +405,8 @@ function calculateShipping(package) {
   debug('Settings: ', JSON.stringify(instanceSettings));
   debug('Packing Details', packageDetails);
 
-  const calculateMethodClass = new Meanbee_RoyalmailPHPLibrary_CalculateMethod();
-  const dataClass = new Meanbee_RoyalmailPHPLibrary_Data(
+  const calculateMethodClass = new CalculateMethod();
+  const dataClass = new Data(
     calculateMethodClass._csvCountryCode,
     calculateMethodClass._csvZoneToDeliverMethod,
     calculateMethodClass._csvDeliveryMethodMeta,
