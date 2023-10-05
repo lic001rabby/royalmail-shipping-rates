@@ -1,0 +1,1946 @@
+[
+  {
+    "1": "WORLD_ZONE_EU_ONE_INTERNATIONAL_STANDARD_LETTER",
+    "2": 0,
+    "3": 20,
+    "4": 20,
+    "5": "International Standard Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_ONE_INTERNATIONAL_STANDARD_LARGE_LETTER",
+    "2": 0,
+    "3": 20,
+    "4": 20,
+    "5": "International Standard Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_ONE_INTERNATIONAL_STANDARD_SMALL_PARCEL",
+    "2": 0,
+    "3": 20,
+    "4": 20,
+    "5": "International Standard Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_EU_ONE_INTERNATIONAL_TRACKED_AND_SIGNED_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked and Signed Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_ONE_INTERNATIONAL_TRACKED_AND_SIGNED_LARGE_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked and Signed Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_ONE_INTERNATIONAL_TRACKED_AND_SIGNED_SMALL_PARCEL",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked and Signed Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_EU_ONE_INTERNATIONAL_TRACKED_AND_SIGNED_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked and Signed Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_ONE_INTERNATIONAL_TRACKED_AND_SIGNED_LARGE_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked and Signed Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_ONE_INTERNATIONAL_TRACKED_AND_SIGNED_SMALL_PARCEL_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked and Signed Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_EU_ONE_INTERNATIONAL_TRACKED_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_ONE_INTERNATIONAL_TRACKED_LARGE_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_ONE_INTERNATIONAL_TRACKED_SMALL_PARCEL",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_EU_ONE_INTERNATIONAL_TRACKED_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_ONE_INTERNATIONAL_TRACKED_LARGE_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_ONE_INTERNATIONAL_TRACKED_SMALL_PARCEL_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_EU_ONE_INTERNATIONAL_SIGNED_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Signed Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_ONE_INTERNATIONAL_SIGNED_LARGE_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Signed Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_ONE_INTERNATIONAL_SIGNED_SMALL_PARCEL",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Signed Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_EU_ONE_INTERNATIONAL_SIGNED_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Signed Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_ONE_INTERNATIONAL_SIGNED_LARGE_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Signed Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_ONE_INTERNATIONAL_SIGNED_SMALL_PARCEL_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Signed Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_EU_TWO_INTERNATIONAL_STANDARD_LETTER",
+    "2": 0,
+    "3": 20,
+    "4": 20,
+    "5": "International Standard Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_TWO_INTERNATIONAL_STANDARD_LARGE_LETTER",
+    "2": 0,
+    "3": 20,
+    "4": 20,
+    "5": "International Standard Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_TWO_INTERNATIONAL_STANDARD_SMALL_PARCEL",
+    "2": 0,
+    "3": 20,
+    "4": 20,
+    "5": "International Standard Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_EU_TWO_INTERNATIONAL_TRACKED_AND_SIGNED_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked and Signed Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_TWO_INTERNATIONAL_TRACKED_AND_SIGNED_LARGE_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked and Signed Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_TWO_INTERNATIONAL_TRACKED_AND_SIGNED_SMALL_PARCEL",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked and Signed Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_EU_TWO_INTERNATIONAL_TRACKED_AND_SIGNED_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked and Signed Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_TWO_INTERNATIONAL_TRACKED_AND_SIGNED_LARGE_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked and Signed Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_TWO_INTERNATIONAL_TRACKED_AND_SIGNED_SMALL_PARCEL_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked and Signed Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_EU_TWO_INTERNATIONAL_TRACKED_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_TWO_INTERNATIONAL_TRACKED_LARGE_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_TWO_INTERNATIONAL_TRACKED_SMALL_PARCEL",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_EU_TWO_INTERNATIONAL_TRACKED_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_TWO_INTERNATIONAL_TRACKED_LARGE_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_TWO_INTERNATIONAL_TRACKED_SMALL_PARCEL_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_EU_TWO_INTERNATIONAL_SIGNED_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Signed Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_TWO_INTERNATIONAL_SIGNED_LARGE_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Signed Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_TWO_INTERNATIONAL_SIGNED_SMALL_PARCEL",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Signed Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_EU_TWO_INTERNATIONAL_SIGNED_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Signed Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_TWO_INTERNATIONAL_SIGNED_LARGE_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Signed Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_TWO_INTERNATIONAL_SIGNED_SMALL_PARCEL_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Signed Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_EU_THREE_INTERNATIONAL_STANDARD_LETTER",
+    "2": 0,
+    "3": 20,
+    "4": 20,
+    "5": "International Standard Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_THREE_INTERNATIONAL_STANDARD_LARGE_LETTER",
+    "2": 0,
+    "3": 20,
+    "4": 20,
+    "5": "International Standard Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_THREE_INTERNATIONAL_STANDARD_SMALL_PARCEL",
+    "2": 0,
+    "3": 20,
+    "4": 20,
+    "5": "International Standard Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_EU_THREE_INTERNATIONAL_TRACKED_AND_SIGNED_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked and Signed Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_THREE_INTERNATIONAL_TRACKED_AND_SIGNED_LARGE_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked and Signed Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_THREE_INTERNATIONAL_TRACKED_AND_SIGNED_SMALL_PARCEL",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked and Signed Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_EU_THREE_INTERNATIONAL_TRACKED_AND_SIGNED_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked and Signed Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_THREE_INTERNATIONAL_TRACKED_AND_SIGNED_LARGE_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked and Signed Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_THREE_INTERNATIONAL_TRACKED_AND_SIGNED_SMALL_PARCEL_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked and Signed Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_EU_THREE_INTERNATIONAL_TRACKED_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_THREE_INTERNATIONAL_TRACKED_LARGE_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_THREE_INTERNATIONAL_TRACKED_SMALL_PARCEL",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_EU_THREE_INTERNATIONAL_TRACKED_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_THREE_INTERNATIONAL_TRACKED_LARGE_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_THREE_INTERNATIONAL_TRACKED_SMALL_PARCEL_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_EU_THREE_INTERNATIONAL_SIGNED_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Signed Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_THREE_INTERNATIONAL_SIGNED_LARGE_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Signed Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_THREE_INTERNATIONAL_SIGNED_SMALL_PARCEL",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Signed Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_EU_THREE_INTERNATIONAL_SIGNED_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Signed Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_THREE_INTERNATIONAL_SIGNED_LARGE_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Signed Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_THREE_INTERNATIONAL_SIGNED_SMALL_PARCEL_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Signed Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_EU_INTERNATIONAL_STANDARD_LETTER",
+    "2": 0,
+    "3": 20,
+    "4": 20,
+    "5": "International Standard Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_INTERNATIONAL_STANDARD_LARGE_LETTER",
+    "2": 0,
+    "3": 20,
+    "4": 20,
+    "5": "International Standard Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_INTERNATIONAL_STANDARD_SMALL_PARCEL",
+    "2": 0,
+    "3": 20,
+    "4": 20,
+    "5": "International Standard Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_EU_INTERNATIONAL_TRACKED_AND_SIGNED_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked and Signed Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_INTERNATIONAL_TRACKED_AND_SIGNED_LARGE_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked and Signed Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_INTERNATIONAL_TRACKED_AND_SIGNED_SMALL_PARCEL",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked and Signed Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_EU_INTERNATIONAL_TRACKED_AND_SIGNED_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked and Signed Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_INTERNATIONAL_TRACKED_AND_SIGNED_LARGE_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked and Signed Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_INTERNATIONAL_TRACKED_AND_SIGNED_SMALL_PARCEL_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked and Signed Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_EU_INTERNATIONAL_TRACKED_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_INTERNATIONAL_TRACKED_LARGE_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_INTERNATIONAL_TRACKED_SMALL_PARCEL",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_EU_INTERNATIONAL_TRACKED_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_INTERNATIONAL_TRACKED_LARGE_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_INTERNATIONAL_TRACKED_SMALL_PARCEL_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_EU_INTERNATIONAL_SIGNED_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Signed Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_INTERNATIONAL_SIGNED_LARGE_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Signed Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_INTERNATIONAL_SIGNED_SMALL_PARCEL",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Signed Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_EU_INTERNATIONAL_SIGNED_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Signed Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_INTERNATIONAL_SIGNED_LARGE_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Signed Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_EU_INTERNATIONAL_SIGNED_SMALL_PARCEL_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Signed Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_ONE_INTERNATIONAL_STANDARD_LETTER",
+    "2": 0,
+    "3": 20,
+    "4": 20,
+    "5": "International Standard Letter"
+  },
+  {
+    "1": "WORLD_ZONE_ONE_INTERNATIONAL_STANDARD_LARGE_LETTER",
+    "2": 0,
+    "3": 20,
+    "4": 20,
+    "5": "International Standard Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_ONE_INTERNATIONAL_STANDARD_SMALL_PARCEL",
+    "2": 0,
+    "3": 20,
+    "4": 20,
+    "5": "International Standard Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_ONE_INTERNATIONAL_TRACKED_AND_SIGNED_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked and Signed Letter"
+  },
+  {
+    "1": "WORLD_ZONE_ONE_INTERNATIONAL_TRACKED_AND_SIGNED_LARGE_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked and Signed Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_ONE_INTERNATIONAL_TRACKED_AND_SIGNED_SMALL_PARCEL",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked and Signed Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_ONE_INTERNATIONAL_TRACKED_AND_SIGNED_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked and Signed Letter"
+  },
+  {
+    "1": "WORLD_ZONE_ONE_INTERNATIONAL_TRACKED_AND_SIGNED_LARGE_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked and Signed Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_ONE_INTERNATIONAL_TRACKED_AND_SIGNED_SMALL_PARCEL_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked and Signed Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_ONE_INTERNATIONAL_TRACKED_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked Letter"
+  },
+  {
+    "1": "WORLD_ZONE_ONE_INTERNATIONAL_TRACKED_LARGE_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_ONE_INTERNATIONAL_TRACKED_SMALL_PARCEL",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_ONE_INTERNATIONAL_TRACKED_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked Letter"
+  },
+  {
+    "1": "WORLD_ZONE_ONE_INTERNATIONAL_TRACKED_LARGE_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_ONE_INTERNATIONAL_TRACKED_SMALL_PARCEL_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_ONE_INTERNATIONAL_SIGNED_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Signed Letter"
+  },
+  {
+    "1": "WORLD_ZONE_ONE_INTERNATIONAL_SIGNED_LARGE_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Signed Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_ONE_INTERNATIONAL_SIGNED_SMALL_PARCEL",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Signed Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_ONE_INTERNATIONAL_SIGNED_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Signed Letter"
+  },
+  {
+    "1": "WORLD_ZONE_ONE_INTERNATIONAL_SIGNED_LARGE_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Signed Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_ONE_INTERNATIONAL_SIGNED_SMALL_PARCEL_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Signed Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_ONE_INTERNATIONAL_ECONOMY_LETTER",
+    "2": 0,
+    "3": 20,
+    "4": 20,
+    "5": "International Economy Letter"
+  },
+  {
+    "1": "WORLD_ZONE_ONE_INTERNATIONAL_ECONOMY_LARGE_LETTER",
+    "2": 0,
+    "3": 20,
+    "4": 20,
+    "5": "International Economy Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_ONE_INTERNATIONAL_ECONOMY_SMALL_PARCEL",
+    "2": 0,
+    "3": 20,
+    "4": 20,
+    "5": "International Economy Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_TWO_INTERNATIONAL_STANDARD_LETTER",
+    "2": 0,
+    "3": 20,
+    "4": 20,
+    "5": "International Standard Letter"
+  },
+  {
+    "1": "WORLD_ZONE_TWO_INTERNATIONAL_STANDARD_LARGE_LETTER",
+    "2": 0,
+    "3": 20,
+    "4": 20,
+    "5": "International Standard Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_TWO_INTERNATIONAL_STANDARD_SMALL_PARCEL",
+    "2": 0,
+    "3": 20,
+    "4": 20,
+    "5": "International Standard Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_TWO_INTERNATIONAL_TRACKED_AND_SIGNED_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked and Signed Letter"
+  },
+  {
+    "1": "WORLD_ZONE_TWO_INTERNATIONAL_TRACKED_AND_SIGNED_LARGE_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked and Signed Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_TWO_INTERNATIONAL_TRACKED_AND_SIGNED_SMALL_PARCEL",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked and Signed Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_TWO_INTERNATIONAL_TRACKED_AND_SIGNED_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked and Signed Letter"
+  },
+  {
+    "1": "WORLD_ZONE_TWO_INTERNATIONAL_TRACKED_AND_SIGNED_LARGE_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked and Signed Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_TWO_INTERNATIONAL_TRACKED_AND_SIGNED_SMALL_PARCEL_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked and Signed Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_TWO_INTERNATIONAL_TRACKED_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked Letter"
+  },
+  {
+    "1": "WORLD_ZONE_TWO_INTERNATIONAL_TRACKED_LARGE_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_TWO_INTERNATIONAL_TRACKED_SMALL_PARCEL",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_TWO_INTERNATIONAL_TRACKED_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked Letter"
+  },
+  {
+    "1": "WORLD_ZONE_TWO_INTERNATIONAL_TRACKED_LARGE_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_TWO_INTERNATIONAL_TRACKED_SMALL_PARCEL_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_TWO_INTERNATIONAL_SIGNED_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Signed Letter"
+  },
+  {
+    "1": "WORLD_ZONE_TWO_INTERNATIONAL_SIGNED_LARGE_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Signed Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_TWO_INTERNATIONAL_SIGNED_SMALL_PARCEL",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Signed Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_TWO_INTERNATIONAL_SIGNED_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Signed Letter"
+  },
+  {
+    "1": "WORLD_ZONE_TWO_INTERNATIONAL_SIGNED_LARGE_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Signed Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_TWO_INTERNATIONAL_SIGNED_SMALL_PARCEL_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Signed Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_TWO_INTERNATIONAL_ECONOMY_LETTER",
+    "2": 0,
+    "3": 20,
+    "4": 20,
+    "5": "International Economy Letter"
+  },
+  {
+    "1": "WORLD_ZONE_TWO_INTERNATIONAL_ECONOMY_LARGE_LETTER",
+    "2": 0,
+    "3": 20,
+    "4": 20,
+    "5": "International Economy Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_TWO_INTERNATIONAL_ECONOMY_SMALL_PARCEL",
+    "2": 0,
+    "3": 20,
+    "4": 20,
+    "5": "International Economy Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_THREE_INTERNATIONAL_STANDARD_LETTER",
+    "2": 0,
+    "3": 20,
+    "4": 20,
+    "5": "International Standard Letter"
+  },
+  {
+    "1": "WORLD_ZONE_THREE_INTERNATIONAL_STANDARD_LARGE_LETTER",
+    "2": 0,
+    "3": 20,
+    "4": 20,
+    "5": "International Standard Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_THREE_INTERNATIONAL_STANDARD_SMALL_PARCEL",
+    "2": 0,
+    "3": 20,
+    "4": 20,
+    "5": "International Standard Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_THREE_INTERNATIONAL_TRACKED_AND_SIGNED_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked and Signed Letter"
+  },
+  {
+    "1": "WORLD_ZONE_THREE_INTERNATIONAL_TRACKED_AND_SIGNED_LARGE_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked and Signed Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_THREE_INTERNATIONAL_TRACKED_AND_SIGNED_SMALL_PARCEL",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked and Signed Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_THREE_INTERNATIONAL_TRACKED_AND_SIGNED_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked and Signed Letter"
+  },
+  {
+    "1": "WORLD_ZONE_THREE_INTERNATIONAL_TRACKED_AND_SIGNED_LARGE_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked and Signed Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_THREE_INTERNATIONAL_TRACKED_AND_SIGNED_SMALL_PARCEL_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked and Signed Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_THREE_INTERNATIONAL_TRACKED_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked Letter"
+  },
+  {
+    "1": "WORLD_ZONE_THREE_INTERNATIONAL_TRACKED_LARGE_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_THREE_INTERNATIONAL_TRACKED_SMALL_PARCEL",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Tracked Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_THREE_INTERNATIONAL_TRACKED_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked Letter"
+  },
+  {
+    "1": "WORLD_ZONE_THREE_INTERNATIONAL_TRACKED_LARGE_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_THREE_INTERNATIONAL_TRACKED_SMALL_PARCEL_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Tracked Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_THREE_INTERNATIONAL_SIGNED_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Signed Letter"
+  },
+  {
+    "1": "WORLD_ZONE_THREE_INTERNATIONAL_SIGNED_LARGE_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Signed Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_THREE_INTERNATIONAL_SIGNED_SMALL_PARCEL",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "International Signed Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_THREE_INTERNATIONAL_SIGNED_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Signed Letter"
+  },
+  {
+    "1": "WORLD_ZONE_THREE_INTERNATIONAL_SIGNED_LARGE_LETTER_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Signed Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_THREE_INTERNATIONAL_SIGNED_SMALL_PARCEL_EXTRA_INSURANCE",
+    "2": 50.01,
+    "3": 250,
+    "4": 250,
+    "5": "International Signed Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "WORLD_ZONE_THREE_INTERNATIONAL_ECONOMY_LETTER",
+    "2": 0,
+    "3": 20,
+    "4": 20,
+    "5": "International Economy Letter"
+  },
+  {
+    "1": "WORLD_ZONE_THREE_INTERNATIONAL_ECONOMY_LARGE_LETTER",
+    "2": 0,
+    "3": 20,
+    "4": 20,
+    "5": "International Economy Large Letter"
+  },
+  {
+    "1": "WORLD_ZONE_THREE_INTERNATIONAL_ECONOMY_SMALL_PARCEL",
+    "2": 0,
+    "3": 20,
+    "4": 20,
+    "5": "International Economy Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "UK_GUARANTEED_ROYAL_MAIL_SPECIAL_DELIVERY_1PM_750",
+    "2": 0,
+    "3": 750,
+    "4": 750,
+    "5": "Special Delivery: Guaranteed by 1pm"
+  },
+  {
+    "1": "UK_GUARANTEED_ROYAL_MAIL_SPECIAL_DELIVERY_1PM_1000",
+    "2": 501,
+    "3": 1000,
+    "4": 1000,
+    "5": "Special Delivery: Guaranteed by 1pm"
+  },
+  {
+    "1": "UK_GUARANTEED_ROYAL_MAIL_SPECIAL_DELIVERY_1PM_2500",
+    "2": 1001,
+    "3": 2500,
+    "4": 2500,
+    "5": "Special Delivery: Guaranteed by 1pm"
+  },
+  {
+    "1": "UK_GUARANTEED_ROYAL_MAIL_SPECIAL_DELIVERY_9AM_50",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "Special Delivery: Guaranteed by 9am"
+  },
+  {
+    "1": "UK_GUARANTEED_ROYAL_MAIL_SPECIAL_DELIVERY_9AM_1000",
+    "2": 51,
+    "3": 1000,
+    "4": 1000,
+    "5": "Special Delivery: Guaranteed by 9am"
+  },
+  {
+    "1": "UK_GUARANTEED_ROYAL_MAIL_SPECIAL_DELIVERY_9AM_2500",
+    "2": 1001,
+    "3": 2500,
+    "4": 2500,
+    "5": "Special Delivery: Guaranteed by 9am"
+  },
+  {
+    "1": "UK_GUARANTEED_ROYAL_MAIL_SPECIAL_DELIVERY_1PM_SATURDAY_750",
+    "2": 0,
+    "3": 750,
+    "4": 750,
+    "5": "Special Delivery: Guaranteed by 1pm Saturday"
+  },
+  {
+    "1": "UK_GUARANTEED_ROYAL_MAIL_SPECIAL_DELIVERY_1PM_SATURDAY_1000",
+    "2": 501,
+    "3": 1000,
+    "4": 1000,
+    "5": "Special Delivery: Guaranteed by 1pm Saturday"
+  },
+  {
+    "1": "UK_GUARANTEED_ROYAL_MAIL_SPECIAL_DELIVERY_1PM_SATURDAY_2500",
+    "2": 1001,
+    "3": 2500,
+    "4": 2500,
+    "5": "Special Delivery: Guaranteed by 1pm Saturday"
+  },
+  {
+    "1": "UK_GUARANTEED_ROYAL_MAIL_SPECIAL_DELIVERY_9AM_SATURDAY_50",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "Special Delivery: Guaranteed by 9am Saturday"
+  },
+  {
+    "1": "UK_GUARANTEED_ROYAL_MAIL_SPECIAL_DELIVERY_9AM_SATURDAY_1000",
+    "2": 51,
+    "3": 1000,
+    "4": 1000,
+    "5": "Special Delivery: Guaranteed by 9am Saturday"
+  },
+  {
+    "1": "UK_GUARANTEED_ROYAL_MAIL_SPECIAL_DELIVERY_9AM_SATURDAY_2500",
+    "2": 1001,
+    "3": 2500,
+    "4": 2500,
+    "5": "Special Delivery: Guaranteed by 9am Saturday"
+  },
+  {
+    "1": "UK_CONFIRMED_ROYAL_MAIL_SIGNED_FOR_FIRST_CLASS_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "Signed For: First Class Letter"
+  },
+  {
+    "1": "UK_CONFIRMED_ROYAL_MAIL_SIGNED_FOR_FIRST_CLASS_LARGE_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "Signed For: First Class Large Letter"
+  },
+  {
+    "1": "UK_CONFIRMED_ROYAL_MAIL_SIGNED_FOR_FIRST_CLASS_SMALL_PARCEL",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "Signed For: First Class Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "UK_CONFIRMED_ROYAL_MAIL_SIGNED_FOR_FIRST_CLASS_MEDIUM_PARCEL",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "Signed For: First Class Medium Parcel",
+    "6": "MEDIUM"
+  },
+  {
+    "1": "UK_CONFIRMED_ROYAL_MAIL_SIGNED_FOR_SECOND_CLASS_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "Signed For: Second Class Letter"
+  },
+  {
+    "1": "UK_CONFIRMED_ROYAL_MAIL_SIGNED_FOR_SECOND_CLASS_LARGE_LETTER",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "Signed For: Second Class Large Letter"
+  },
+  {
+    "1": "UK_CONFIRMED_ROYAL_MAIL_SIGNED_FOR_SECOND_CLASS_SMALL_PARCEL",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "Signed For: Second Class Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "UK_CONFIRMED_ROYAL_MAIL_SIGNED_FOR_SECOND_CLASS_MEDIUM_PARCEL",
+    "2": 0,
+    "3": 50,
+    "4": 50,
+    "5": "Signed For: Second Class Medium Parcel",
+    "6": "MEDIUM"
+  },
+  {
+    "1": "UK_STANDARD_FIRST_CLASS_LETTER",
+    "2": 0,
+    "3": 20,
+    "4": 20,
+    "5": "Standard First Class Letter"
+  },
+  {
+    "1": "UK_STANDARD_FIRST_CLASS_LARGE_LETTER",
+    "2": 0,
+    "3": 20,
+    "4": 20,
+    "5": "Standard First Class Large Letter"
+  },
+  {
+    "1": "UK_STANDARD_FIRST_CLASS_SMALL_PARCEL",
+    "2": 0,
+    "3": 20,
+    "4": 20,
+    "5": "Standard First Class Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "UK_STANDARD_FIRST_CLASS_MEDIUM_PARCEL",
+    "2": 0,
+    "3": 20,
+    "4": 20,
+    "5": "Standard First Class Medium Parcel",
+    "6": "MEDIUM"
+  },
+  {
+    "1": "UK_STANDARD_SECOND_CLASS_LETTER",
+    "2": 0,
+    "3": 20,
+    "4": 20,
+    "5": "Second Class Letter"
+  },
+  {
+    "1": "UK_STANDARD_SECOND_CLASS_LARGE_LETTER",
+    "2": 0,
+    "3": 20,
+    "4": 20,
+    "5": "Second Class Large Letter"
+  },
+  {
+    "1": "UK_STANDARD_SECOND_CLASS_SMALL_PARCEL",
+    "2": 0,
+    "3": 20,
+    "4": 20,
+    "5": "Second Class Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "UK_STANDARD_SECOND_CLASS_MEDIUM_PARCEL",
+    "2": 0,
+    "3": 20,
+    "4": 20,
+    "5": "Second Class Medium Parcel",
+    "6": "MEDIUM"
+  },
+  {
+    "1": "UK_TRACKED_24_LARGE_LETTER",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Tracked 24: Large Letter"
+  },
+  {
+    "1": "UK_TRACKED_24_SMALL_PARCEL",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Tracked 24: Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "UK_TRACKED_24_MEDIUM_PARCEL",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Tracked 24: Medium Parcel",
+    "6": "MEDIUM"
+  },
+  {
+    "1": "UK_TRACKED_24_WITH_SIGNATURE_LARGE_LETTER",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Tracked 24 With Signature: Large Letter"
+  },
+  {
+    "1": "UK_TRACKED_24_WITH_SIGNATURE_SMALL_PARCEL",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Tracked 24 With Signature: Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "UK_TRACKED_24_WITH_SIGNATURE_MEDIUM_PARCEL",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Tracked 24 With Signature: Medium Parcel",
+    "6": "MEDIUM"
+  },
+  {
+    "1": "UK_TRACKED_48_LARGE_LETTER",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Tracked 48: Large Letter"
+  },
+  {
+    "1": "UK_TRACKED_48_SMALL_PARCEL",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Tracked 48: Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "UK_TRACKED_48_MEDIUM_PARCEL",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Tracked 48: Medium Parcel",
+    "6": "MEDIUM"
+  },
+  {
+    "1": "UK_TRACKED_48_WITH_SIGNATURE_LARGE_LETTER",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Tracked 48 With Signature: Large Letter"
+  },
+  {
+    "1": "UK_TRACKED_48_WITH_SIGNATURE_SMALL_PARCEL",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Tracked 48 With Signature: Small Parcel",
+    "6": "SMALL"
+  },
+  {
+    "1": "UK_TRACKED_48_WITH_SIGNATURE_MEDIUM_PARCEL",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Tracked 48 With Signature: Medium Parcel",
+    "6": "MEDIUM"
+  },
+  {
+    "1": "PARCELFORCE_WORLDWIDE_EXPRESS_9",
+    "2": 0,
+    "3": 200,
+    "4": 200,
+    "5": "Parcelforce Worldwide: Express 9"
+  },
+  {
+    "1": "PARCELFORCE_WORLDWIDE_EXPRESS_10",
+    "2": 0,
+    "3": 200,
+    "4": 200,
+    "5": "Parcelforce Worldwide: Express 10"
+  },
+  {
+    "1": "PARCELFORCE_WORLDWIDE_EXPRESS_AM",
+    "2": 0,
+    "3": 200,
+    "4": 200,
+    "5": "Parcelforce Worldwide: Express AM"
+  },
+  {
+    "1": "PARCELFORCE_WORLDWIDE_EXPRESS_24",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Express 24"
+  },
+  {
+    "1": "PARCELFORCE_WORLDWIDE_EXPRESS_48",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Express 48"
+  },
+  {
+    "1": "PARCELFORCE_WORLDWIDE_EXPRESS_48_LARGE",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Express 48 Large"
+  },
+  {
+    "1": "PARCELFORCE_WORLDWIDE_EXPRESS_9_SATURDAY",
+    "2": 0,
+    "3": 200,
+    "4": 200,
+    "5": "Parcelforce Worldwide: Express 9 Saturday"
+  },
+  {
+    "1": "PARCELFORCE_WORLDWIDE_EXPRESS_10_SATURDAY",
+    "2": 0,
+    "3": 200,
+    "4": 200,
+    "5": "Parcelforce Worldwide: Express 10 Saturday"
+  },
+  {
+    "1": "PARCELFORCE_WORLDWIDE_EXPRESS_AM_SATURDAY",
+    "2": 0,
+    "3": 200,
+    "4": 200,
+    "5": "Parcelforce Worldwide: Express AM Saturday"
+  },
+  {
+    "1": "PARCELFORCE_WORLDWIDE_EXPRESS_24_SATURDAY",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Express 24 Saturday"
+  },
+  {
+    "1": "PARCELFORCE_WORLDWIDE_EXPRESS_48_SATURDAY",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Express 48 Saturday"
+  },
+  {
+    "1": "PF_WORLD_ZONE_THREE_PARCELFORCE_GLOBAL_VALUE",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Global Value"
+  },
+  {
+    "1": "PF_WORLD_ZONE_THREE_PARCELFORCE_GLOBAL_PRIORITY",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Global Priority"
+  },
+  {
+    "1": "PF_WORLD_ZONE_THREE_PARCELFORCE_GLOBAL_EXPRESS",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Global Express"
+  },
+  {
+    "1": "PF_WORLD_ZONE_FOUR_PARCELFORCE_GLOBAL_VALUE",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Global Value"
+  },
+  {
+    "1": "PF_WORLD_ZONE_FOUR_PARCELFORCE_GLOBAL_PRIORITY",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Global Priority"
+  },
+  {
+    "1": "PF_WORLD_ZONE_FOUR_PARCELFORCE_GLOBAL_EXPRESS",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Global Express"
+  },
+  {
+    "1": "PF_WORLD_ZONE_FOUR_PARCELFORCE_EURO_PRIORITY_BUSINESS",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Euro Priority Business"
+  },
+  {
+    "1": "PF_WORLD_ZONE_FOUR_PARCELFORCE_EURO_PRIORITY_HOME",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Euro Priority Home"
+  },
+  {
+    "1": "PF_WORLD_ZONE_FIVE_PARCELFORCE_GLOBAL_VALUE",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Global Value"
+  },
+  {
+    "1": "PF_WORLD_ZONE_FIVE_PARCELFORCE_GLOBAL_PRIORITY",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Global Priority"
+  },
+  {
+    "1": "PF_WORLD_ZONE_FIVE_PARCELFORCE_GLOBAL_EXPRESS",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Global Express"
+  },
+  {
+    "1": "PF_WORLD_ZONE_FIVE_PARCELFORCE_EURO_PRIORITY_BUSINESS",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Euro Priority Business"
+  },
+  {
+    "1": "PF_WORLD_ZONE_FIVE_PARCELFORCE_EURO_PRIORITY_HOME",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Euro Priority Home"
+  },
+  {
+    "1": "PF_WORLD_ZONE_SIX_PARCELFORCE_GLOBAL_VALUE",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Global Value"
+  },
+  {
+    "1": "PF_WORLD_ZONE_SIX_PARCELFORCE_GLOBAL_PRIORITY",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Global Priority"
+  },
+  {
+    "1": "PF_WORLD_ZONE_SIX_PARCELFORCE_GLOBAL_EXPRESS",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Global Express"
+  },
+  {
+    "1": "PF_WORLD_ZONE_SIX_PARCELFORCE_EURO_PRIORITY_BUSINESS",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Euro Priority Business"
+  },
+  {
+    "1": "PF_WORLD_ZONE_SIX_PARCELFORCE_EURO_PRIORITY_HOME",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Euro Priority Home"
+  },
+  {
+    "1": "PF_WORLD_ZONE_SEVEN_PARCELFORCE_GLOBAL_VALUE",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Global Value"
+  },
+  {
+    "1": "PF_WORLD_ZONE_SEVEN_PARCELFORCE_GLOBAL_PRIORITY",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Global Priority"
+  },
+  {
+    "1": "PF_WORLD_ZONE_SEVEN_PARCELFORCE_GLOBAL_EXPRESS",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Global Express"
+  },
+  {
+    "1": "PF_WORLD_ZONE_SEVEN_PARCELFORCE_EURO_PRIORITY_BUSINESS",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Euro Priority Business"
+  },
+  {
+    "1": "PF_WORLD_ZONE_SEVEN_PARCELFORCE_EURO_PRIORITY_HOME",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Euro Priority Home"
+  },
+  {
+    "1": "PF_WORLD_ZONE_EIGHT_PARCELFORCE_GLOBAL_VALUE",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Global Value"
+  },
+  {
+    "1": "PF_WORLD_ZONE_EIGHT_PARCELFORCE_GLOBAL_PRIORITY",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Global Priority"
+  },
+  {
+    "1": "PF_WORLD_ZONE_EIGHT_PARCELFORCE_GLOBAL_EXPRESS",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Global Express"
+  },
+  {
+    "1": "PF_WORLD_ZONE_EIGHT_PARCELFORCE_EURO_PRIORITY_BUSINESS",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Euro Priority Business"
+  },
+  {
+    "1": "PF_WORLD_ZONE_EIGHT_PARCELFORCE_EURO_PRIORITY_HOME",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Euro Priority Home"
+  },
+  {
+    "1": "PF_WORLD_ZONE_NINE_PARCELFORCE_GLOBAL_VALUE",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Global Value"
+  },
+  {
+    "1": "PF_WORLD_ZONE_NINE_PARCELFORCE_GLOBAL_PRIORITY",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Global Priority"
+  },
+  {
+    "1": "PF_WORLD_ZONE_NINE_PARCELFORCE_GLOBAL_EXPRESS",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Global Express"
+  },
+  {
+    "1": "PF_WORLD_ZONE_NINE_PARCELFORCE_EURO_PRIORITY_BUSINESS",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Euro Priority Business"
+  },
+  {
+    "1": "PF_WORLD_ZONE_NINE_PARCELFORCE_EURO_PRIORITY_HOME",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Euro Priority Home"
+  },
+  {
+    "1": "PF_WORLD_ZONE_TEN_PARCELFORCE_GLOBAL_VALUE",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Global Value"
+  },
+  {
+    "1": "PF_WORLD_ZONE_TEN_PARCELFORCE_GLOBAL_PRIORITY",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Global Priority"
+  },
+  {
+    "1": "PF_WORLD_ZONE_TEN_PARCELFORCE_GLOBAL_EXPRESS",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Global Express"
+  },
+  {
+    "1": "PF_WORLD_ZONE_ELEVEN_PARCELFORCE_GLOBAL_ECONOMY",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Global Economy"
+  },
+  {
+    "1": "PF_WORLD_ZONE_ELEVEN_PARCELFORCE_GLOBAL_VALUE",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Global Value"
+  },
+  {
+    "1": "PF_WORLD_ZONE_ELEVEN_PARCELFORCE_GLOBAL_PRIORITY",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Global Priority"
+  },
+  {
+    "1": "PF_WORLD_ZONE_ELEVEN_PARCELFORCE_GLOBAL_EXPRESS",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Global Express"
+  },
+  {
+    "1": "PF_WORLD_ZONE_TWELVE_PARCELFORCE_GLOBAL_ECONOMY",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Global Economy"
+  },
+  {
+    "1": "PF_WORLD_ZONE_TWELVE_PARCELFORCE_GLOBAL_VALUE",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Global Value"
+  },
+  {
+    "1": "PF_WORLD_ZONE_TWELVE_PARCELFORCE_GLOBAL_PRIORITY",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Global Priority"
+  },
+  {
+    "1": "PF_WORLD_ZONE_TWELVE_PARCELFORCE_GLOBAL_EXPRESS",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "Parcelforce Worldwide: Global Express"
+  },
+  {
+    "1": "WORLD_ZONE_EU_PRINTED_PAPER_STANDARD",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "International Standard Printed Papers"
+  },
+  {
+    "1": "WORLD_ZONE_EU_PRINTED_PAPER_TRACKED",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "International Tracked Printed Papers"
+  },
+  {
+    "1": "WORLD_ZONE_EU_PRINTED_PAPER_SIGNED",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "International Signed Printed Papers"
+  },
+  {
+    "1": "WORLD_ZONE_EU_PRINTED_PAPER_TRACKED_AND_SIGNED",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "International Tracked & Signed Printed Papers"
+  },
+  {
+    "1": "WORLD_ZONE_ONE_PRINTED_PAPER_STANDARD",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "International Standard Printed Papers"
+  },
+  {
+    "1": "WORLD_ZONE_ONE_PRINTED_PAPER_TRACKED",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "International Tracked Printed Papers"
+  },
+  {
+    "1": "WORLD_ZONE_ONE_PRINTED_PAPER_SIGNED",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "International Signed Printed Papers"
+  },
+  {
+    "1": "WORLD_ZONE_ONE_PRINTED_PAPER_TRACKED_AND_SIGNED",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "International Tracked & Signed Printed Papers"
+  },
+  {
+    "1": "WORLD_ZONE_TWO_PRINTED_PAPER_STANDARD",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "International Standard Printed Papers"
+  },
+  {
+    "1": "WORLD_ZONE_TWO_PRINTED_PAPER_TRACKED",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "International Tracked Printed Papers"
+  },
+  {
+    "1": "WORLD_ZONE_TWO_PRINTED_PAPER_SIGNED",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "International Signed Printed Papers"
+  },
+  {
+    "1": "WORLD_ZONE_TWO_PRINTED_PAPER_TRACKED_AND_SIGNED",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "International Tracked & Signed Printed Papers"
+  },
+  {
+    "1": "WORLD_ZONE_THREE_PRINTED_PAPER_STANDARD",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "International Standard Printed Papers"
+  },
+  {
+    "1": "WORLD_ZONE_THREE_PRINTED_PAPER_TRACKED",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "International Tracked Printed Papers"
+  },
+  {
+    "1": "WORLD_ZONE_THREE_PRINTED_PAPER_SIGNED",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "International Signed Printed Papers"
+  },
+  {
+    "1": "WORLD_ZONE_THREE_PRINTED_PAPER_TRACKED_AND_SIGNED",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "International Tracked & Signed Printed Papers"
+  },
+  {
+    "1": "WORLD_ZONE_NON_EU_PRINTED_PAPER_TRACKED",
+    "2": 0,
+    "3": 100,
+    "4": 100,
+    "5": "International Tracked Printed Papers"
+  }
+]
