@@ -1,17 +1,33 @@
 const fs = require('fs');
+const path = require('path');
+
 const Papa = require('papaparse');
-export default class Data {
+
+class RoyalMailData {
   /**
    * Constructor for the class.
    * Initializes all the instance variables.
    */
-  constructor() {
+  constructor(
+    _csvCountryCode,
+    _csvZoneToDeliverMethod,
+    _csvDeliveryMethodMeta,
+    _csvDeliveryToPrice,
+    _csvCleanNameToMethod,
+    _csvCleanNameMethodGroup
+  ) {
     // Instance variables
     this._country = '';
     this._weight = 0;
     this._weight_unit = '';
     this._cart_total = 0;
     this._negative_weight = false;
+    this._csvCountryCode = _csvCountryCode;
+    this._csvZoneToDeliverMethod = _csvZoneToDeliverMethod;
+    this._csvDeliveryMethodMeta = _csvDeliveryMethodMeta;
+    this._csvDeliveryToPrice = _csvDeliveryToPrice;
+    this._csvCleanNameToMethod = _csvCleanNameToMethod;
+    this._csvCleanNameMethodGroup = _csvCleanNameMethodGroup;
 
     // Constants to link to the appropriate columns in the CSV files
     this.COUNTRY_CODE = 0;
@@ -75,18 +91,33 @@ export default class Data {
    *
    * @return {Array}
    */
-  calculateMethods(country_code, package_value, package_weight) {
+  async calculateMethods(country_code, package_value, package_weight) {
+    this.mappingCleanNameToMethod = await this.csvToArray(this._csvCleanNameToMethod);
+    this.mappingCleanNameMethodGroup = await this.csvToArray(this._csvCleanNameMethodGroup);
+    this.mappingCountryToZone = await this.csvToArray(this._csvCountryCode);
+
+    this.mappingZoneToMethod = await this.csvToArray(this._csvZoneToDeliverMethod);
+
+    this.mappingMethodToMeta = await this.csvToArray(this._csvDeliveryMethodMeta);
+
+    this.mappingDeliveryToPrice = await this.csvToArray(this._csvDeliveryToPrice);
+    // console.log('mappingDeliveryToPrice', this.mappingDeliveryToPrice);
+
     this.sortedCountryCodeMethods = [this.getCountryCodeData(country_code, this.mappingCountryToZone)];
+    // console.log('sortedCountryCodeMethods', this.sortedCountryCodeMethods);
 
     this.sortedZoneToMethods = [this.getZoneToMethod(this.sortedCountryCodeMethods, this.mappingZoneToMethod)];
+    // console.log('sortedZoneToMethods', this.sortedZoneToMethods);
 
     this.sortedMethodToMeta = [this.getMethodToMeta(package_value, this.sortedZoneToMethods, this.mappingMethodToMeta)];
+    // console.log('sortedMethodToMeta', this.sortedMethodToMeta[0]);
 
     this.sortedDeliveryToPrices = this.getMethodToPrice(
       package_weight,
       this.sortedMethodToMeta,
       this.mappingDeliveryToPrice
     );
+    // console.log('sortedDeliveryToPrices', this.sortedDeliveryToPrices, package_weight, package_value);
 
     return this.sortedDeliveryToPrices;
   }
@@ -102,6 +133,7 @@ export default class Data {
    * @return {Array}
    */
   getCountryCodeData(country_code, mappingCountryToZone) {
+    // console.log('mappingCountryToZone', mappingCountryToZone, country_code);
     // Get All array items that match the country code
     const countryCodeData = [];
     mappingCountryToZone.forEach((item) => {
@@ -118,7 +150,6 @@ export default class Data {
         delete countryCodeData[key];
       }
     });
-
     return countryCodeData.filter((value) => value !== undefined);
   }
 
@@ -175,6 +206,7 @@ export default class Data {
     sortedZoneToMethods.forEach((value) => {
       value.forEach((method) => {
         mappingMethodToMeta.forEach((item) => {
+
           if (item[this.SHIPPING_METHOD] === method) {
             if (packageValue >= item[this.METHOD_MIN_VALUE] && packageValue <= item[this.METHOD_MAX_VALUE]) {
               mappingZoneMethodData.push([item]);
@@ -204,11 +236,15 @@ export default class Data {
   getMethodToPrice(package_weight, sortedMethodToMeta, mappingDeliveryToPrice) {
     const mappingDeliveryToPriceData = [];
     sortedMethodToMeta.forEach((method) => {
+      // console.log("method", method);
       method.forEach((meta) => {
         Object.keys(meta).forEach((key) => {
           const methodData = meta[key];
+          // console.log('methodData', methodData);
           mappingDeliveryToPrice.forEach((item) => {
-            if (item[this.SHIPPING_METHOD] === methodData) {
+
+            if (item[this.SHIPPING_METHOD] === methodData[0]) {
+              console.log('item', item);
               if (package_weight >= item[this.METHOD_MIN_WEIGHT] && package_weight <= item[this.METHOD_MAX_WEIGHT]) {
                 const resultArray = {
                   shippingMethodName: item[this.SHIPPING_METHOD],
@@ -216,22 +252,20 @@ export default class Data {
                   maximumWeight: item[this.METHOD_MAX_WEIGHT],
                   methodPrice: item[this.METHOD_PRICE],
                   insuranceValue: item[this.METHOD_INSURANCE_VALUE],
-                  shippingMethodNameClean: method[this.METHOD_NAME_CLEAN],
+                  shippingMethodNameClean: methodData[this.METHOD_NAME_CLEAN],
                 };
 
                 if (item[this.METHOD_SIZE]) {
                   resultArray.size = item[this.METHOD_SIZE];
                 }
-
                 mappingDeliveryToPriceData.push(resultArray);
               }
             }
           });
-
         });
       });
     });
-
+    // console.log("DeliveryToPriceData", mappingDeliveryToPriceData);
     return mappingDeliveryToPriceData;
   }
 
@@ -245,9 +279,12 @@ export default class Data {
    */
   async csvToArray(filename = '', delimiter = ',') {
     try {
-      const fileData = await fs.promises.readFile(filename, 'utf8');
+      const directory = path.resolve(filename);
+      // console.log(directory);
+      const fileData = fs.readFileSync(directory, 'utf8');
 
       const results = Papa.parse(fileData, { delimiter, header: false });
+      // console.log(results);
 
       if (results.errors.length > 0) {
         throw new Error(`CSV parsing error: ${results.errors.join(', ')}`);
@@ -316,3 +353,5 @@ export default class Data {
     return weight;
   }
 }
+
+module.exports = RoyalMailData;

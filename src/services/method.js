@@ -1,4 +1,4 @@
-export default class RoyalMailShippingMethod {
+class RoyalMailShippingMethod {
   constructor(
     shippingMethodName,
     shippingMethodNameClean,
@@ -7,7 +7,8 @@ export default class RoyalMailShippingMethod {
     insuranceValue,
     minimumWeight,
     maximumWeight,
-    size
+    size,
+    id
   ) {
     this.shippingMethodName = shippingMethodName;
     this.shippingMethodNameClean = shippingMethodNameClean;
@@ -17,5 +18,8 @@ export default class RoyalMailShippingMethod {
     this.minimumWeight = minimumWeight;
     this.maximumWeight = maximumWeight;
     this.size = size;
+    this.id = id;
   }
 }
+
+module.exports = RoyalMailShippingMethod;

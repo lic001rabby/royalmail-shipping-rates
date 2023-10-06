@@ -1,12 +1,15 @@
-export default class CalculateMethod {
+const RoyalMailData = require('./data');
+const RoyalMailShippingMethod = require('./method');
+
+class CalculateMethod {
   constructor() {
     // Set the default csv values
-    this._csvCountryCode = '../data/1_countryToZone.csv';
-    this._csvZoneToDeliverMethod = '../data/2_zoneToDeliveryMethod.csv';
-    this._csvDeliveryMethodMeta = '../data/3_deliveryMethodMeta.csv';
-    this._csvDeliveryToPrice = '../data/4_deliveryToPrice.csv';
-    this._csvCleanNameToMethod = '../data/5_cleanNameToMethod.csv';
-    this._csvCleanNameMethodGroup = '../data/6_cleanNameMethodGroup.csv';
+    this._csvCountryCode = 'src/csvdata/1_countryToZone.csv';
+    this._csvZoneToDeliverMethod = 'src/csvdata/2_zoneToDeliveryMethod.csv';
+    this._csvDeliveryMethodMeta = 'src/csvdata/3_deliveryMethodMeta.csv';
+    this._csvDeliveryToPrice = 'src/csvdata/4_deliveryToPrice.csv';
+    this._csvCleanNameToMethod = 'src/csvdata/5_cleanNameToMethod.csv';
+    this._csvCleanNameMethodGroup = 'src/csvdata/6_cleanNameMethodGroup.csv';
   }
 
   /**
@@ -22,8 +25,8 @@ export default class CalculateMethod {
    *
    * @return {Array}
    */
-  getMethods(country_code, package_value, package_weight) {
-    const data = new Meanbee_RoyalmailPHPLibrary_Data(
+  async getMethods(country_code, package_value, package_weight) {
+    const data = new RoyalMailData(
       this._csvCountryCode,
       this._csvZoneToDeliverMethod,
       this._csvDeliveryMethodMeta,
@@ -32,29 +35,31 @@ export default class CalculateMethod {
       this._csvCleanNameMethodGroup
     );
 
-    const sortedDeliveryMethods = [data.calculateMethods(country_code, package_value, package_weight)];
+    const sortedDeliveryMethods = await data.calculateMethods(country_code, package_value, package_weight);
 
     const results = [];
+    let idTrack = 10001;
 
-    sortedDeliveryMethods.forEach((shippingMethod) => {
-      shippingMethod.forEach((item) => {
-        const method = new Meanbee_RoyalmailPHPLibrary_Src_Method();
-        method.countryCode = country_code;
-        method.shippingMethodName = item.shippingMethodName;
-        method.minimumWeight = item.minimumWeight;
-        method.maximumWeight = item.maximumWeight;
-        method.methodPrice = item.methodPrice;
-        method.insuranceValue = item.insuranceValue;
-        method.shippingMethodNameClean = item.shippingMethodNameClean;
+    sortedDeliveryMethods.forEach((item) => {
+      const method = new RoyalMailShippingMethod();
+      method.countryCode = country_code;
+      method.shippingMethodName = item.shippingMethodName;
+      method.minimumWeight = item.minimumWeight;
+      method.maximumWeight = item.maximumWeight;
+      method.methodPrice = item.methodPrice;
+      method.insuranceValue = item.insuranceValue;
+      method.shippingMethodNameClean = item.shippingMethodNameClean;
+      method.id = idTrack++;
 
-        if (item.size) {
-          method.size = item.size;
-        }
+      if (item.size) {
+        method.size = item.size;
+      }
 
-        results.push(method);
-      });
+      results.push(method);
     });
 
     return results;
   }
 }
+
+module.exports = CalculateMethod;
