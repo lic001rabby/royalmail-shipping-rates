@@ -2,45 +2,9 @@
 import Data from "./data";
 import CalculateMethod from "./calculateMethod";
 
-function calculateMethods(countryCode, packageValue, packageWeight) {
-  const sortedCountryCodeMethods = [
-    getCountryCodeData(countryCode, mappingCountryToZone)
-  ];
-
-  const sortedZoneToMethods = [
-    getZoneToMethod(sortedCountryCodeMethods, mappingZoneToMethod)
-  ];
-
-  const sortedMethodToMeta = [
-    getMethodToMeta(packageValue, sortedZoneToMethods, mappingMethodToMeta)
-  ];
-
-  const sortedDeliveryToPrices = getMethodToPrice(
-    packageWeight,
-    sortedMethodToMeta,
-    mappingDeliveryToPrice
-  );
-
-  return sortedDeliveryToPrices;
-}
 
 
 // Replace these functions with your actual implementation
-function getCountryCodeData(countryCode, mapping) {
-  // Implement getCountryCodeData logic here
-}
-
-function getZoneToMethod(data, mapping) {
-  // Implement getZoneToMethod logic here
-}
-
-function getMethodToMeta(packageValue, data, mapping) {
-  // Implement getMethodToMeta logic here
-}
-
-function getMethodToPrice(packageWeight, data, mapping) {
-  // Implement getMethodToPrice logic here
-}
 function getMinDimension(width, length, height) {
   const dimensions = { width, length, height };
   const result = Object.keys(dimensions).reduce((minDim, dim) => {
