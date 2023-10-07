@@ -1,4 +1,4 @@
-export default class Item {
+class Item {
   constructor() {
     this.description = null;
     this.width = null;
@@ -82,3 +82,5 @@ export default class Item {
     return this;
   }
 }
+
+module.exports = Item;

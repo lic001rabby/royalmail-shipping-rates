@@ -244,8 +244,7 @@ class RoyalMailData {
           mappingDeliveryToPrice.forEach((item) => {
 
             if (item[this.SHIPPING_METHOD] === methodData[0]) {
-              console.log('item', item);
-              if (package_weight >= item[this.METHOD_MIN_WEIGHT] && package_weight <= item[this.METHOD_MAX_WEIGHT]) {
+              if (package_weight >= Number(item[this.METHOD_MIN_WEIGHT]) && package_weight <= item[this.METHOD_MAX_WEIGHT]) {
                 const resultArray = {
                   shippingMethodName: item[this.SHIPPING_METHOD],
                   minimumWeight: item[this.METHOD_MIN_WEIGHT],

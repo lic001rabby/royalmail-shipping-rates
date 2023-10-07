@@ -1,7 +1,8 @@
-
-import Data from "./data";
-import CalculateMethod from "./calculateMethod";
-
+const RoyalMailBox = require('./box');
+//const Item = require('./item');
+const BinPacking3D = require('binpackingjs').BP3D;
+const { Item, Bin, Packer } = BinPacking3D;
+const StoreItem = require('./item');
 
 
 // Replace these functions with your actual implementation
@@ -13,28 +14,29 @@ function getMinDimension(width, length, height) {
   return result;
 }
 function getPackageDetails(package) {
-  const defaultLength = this.defaultSize && this.defaultSize.length ? this.defaultSize.length : 1;
-  const defaultWidth = this.defaultSize && this.defaultSize.width ? this.defaultSize.width : 1;
-  const defaultHeight = this.defaultSize && this.defaultSize.height ? this.defaultSize.height : 1;
+  const defaultLength = 1;
+  const defaultWidth = 1;
+  const defaultHeight = 1;
 
   let weight = 0;
   let volume = 0;
   const products = [];
 
   // Get weight of order
-  for (const item_id in package.contents) {
-    const values = package.contents[item_id];
-    const _product = values.data;
-    const finalWeight = wc_get_weight(parseFloat(_product.weight) <= 0 ? this.defaultWeight : parseFloat(_product.weight), 'kg');
-    weight += finalWeight * values.quantity;
-    const value = _product.price;
-    const length = parseFloat(wc_get_dimension(parseFloat(_product.length) <= 0 ? defaultLength : parseFloat(_product.length), 'cm'));
-    const height = parseFloat(wc_get_dimension(parseFloat(_product.height) <= 0 ? defaultHeight : parseFloat(_product.height), 'cm'));
-    const width = parseFloat(wc_get_dimension(parseFloat(_product.weight) <= 0 ? defaultWidth : parseFloat(_product.weight), 'cm'));
+  package.contents.forEach((item) => {
+
+    const _product = item;
+    const finalWeight = parseFloat(_product.weight) <= 0 ? this.defaultWeight : parseFloat(_product.weight);
+    weight += finalWeight * item.quantity;
+    const value = item.price;
+    const length = item.length;
+    const height = item.height;
+    const width = item.width;
     const minDimension = Math.min(width, length, height);
+    const item_id = item.code;
     products.push({
-      weight: wc_get_weight(parseFloat(_product.weight) <= 0 ? this.defaultWeight : parseFloat(_product.weight), 'kg'),
-      quantity: values.quantity,
+      weight: item.weight,
+      quantity: item.quantity,
       length,
       height,
       width,
@@ -43,13 +45,13 @@ function getPackageDetails(package) {
       min_dimension: minDimension,
     });
     volume += length * height * width;
-  }
+  });
 
-  const maxWeights = this.getMaxWeight(package, weight);
+  const maxWeights = getMaxWeight(package, package.total_weight);
   products.sort((a, b) => a.min_dimension - b.min_dimension);
 
   const packs = [];
-  let packsCount = 1;
+  let packsCount = 0;
   packs[packsCount] = {
     weight: 0,
     length: 0,
@@ -76,11 +78,11 @@ function getPackageDetails(package) {
       packs[packsCount].width = product.min_dimension === 'width' ? packs[packsCount].width + product.width : product.width;
       packs[packsCount].item_id = product.item_id;
       packs[packsCount].quantity += 1;
-      packs[packsCount].value += parseFloat(product.value).toFixed(2);
+      packs[packsCount].value += product.value;
       const packageHeight = Math.min(packs[packsCount].width, packs[packsCount].length, packs[packsCount].height);
 
       if (packs[packsCount].weight > maxWeight) {
-        packs[packsCount].value -= parseFloat(product.value).toFixed(2);
+        packs[packsCount].value -= product.value;
         packs[packsCount].length = product.min_dimension === 'length' ? packs[packsCount].length - product.length : product.length;
         packs[packsCount].height = product.min_dimension === 'height' ? packs[packsCount].height - product.height : product.height;
         packs[packsCount].width = product.min_dimension === 'width' ? packs[packsCount].width - product.width : product.width;
@@ -95,14 +97,24 @@ function getPackageDetails(package) {
           width: product.width,
           item_id: product.item_id,
           quantity: 1,
-          value: parseFloat(product.value).toFixed(2),
+          value: product.value,
         };
       }
       product.quantity--;
     }
     i++;
   }
-  return packs;
+  return packs.map((item) => {
+    return {
+      ...item,
+      size: getParcelSize({
+        weight: item.weight,
+        length: item.length,
+        height: item.height,
+        width: item.width
+      })
+    };
+  });
 }
 /**
  * Sorts rates based on their cost.
@@ -165,6 +177,18 @@ function isMediumParcel(dimensions) {
   return true;
 }
 
+function getParcelSize(dimensions) {
+  if (isSmallParcel(dimensions)) {
+    return 'small';
+  }
+  else if (isMediumParcel(dimensions)) {
+    return 'medium';
+  }
+  else {
+    return 'large';
+  }
+
+}
 
 function filterMethodsBySize(methods, size) {
   return methods.filter((value) => value.size !== size);
@@ -172,10 +196,12 @@ function filterMethodsBySize(methods, size) {
 
 function getRoyalMailBoxes(parcelSize) {
   const boxes = [];
+  //const parcelSize = getParcelSize(dimensions);
+
 
   if (parcelSize === 'small') {
     boxes.push(
-      new WPRuby_RoyalMail_Box()
+      new RoyalMailBox()
         .setReference('Small Parcel')
         .setOuterLength(450)
         .setOuterWidth(350)
@@ -188,7 +214,7 @@ function getRoyalMailBoxes(parcelSize) {
     );
   } else if (parcelSize === 'medium') {
     boxes.push(
-      new WPRuby_RoyalMail_Box()
+      new RoyalMailBox()
         .setReference('Small Parcel')
         .setOuterLength(450)
         .setOuterWidth(350)
@@ -201,7 +227,7 @@ function getRoyalMailBoxes(parcelSize) {
     );
 
     boxes.push(
-      new WPRuby_RoyalMail_Box()
+      new RoyalMailBox()
         .setReference('Medium Parcel')
         .setOuterLength(610)
         .setOuterWidth(460)
@@ -240,7 +266,7 @@ function getMaxWeight(package, totalWeight, parcelSize) {
   }
 }
 
-function getPackageDetails(package, defaultSize, defaultWeight) {
+/* function getPackageDetails(package, defaultSize = { length: 1, width: 1, height: 1 }, defaultWeight = 0.5) {
   const defaultLength = defaultSize.length || 1;
   const defaultWidth = defaultSize.width || 1;
   const defaultHeight = defaultSize.height || 1;
@@ -254,7 +280,7 @@ function getPackageDetails(package, defaultSize, defaultWeight) {
     const values = package.contents[item_id];
     const _product = values.data;
 
-    const final_weight = parseFloat(_product.get_weight()) <= 0 ? defaultWeight : parseFloat(_product.get_weight());
+    const final_weight = parseFloat(_product.weight) <= 0 ? defaultWeight : parseFloat(_product.get_weight());
     weight += final_weight * values.quantity;
     const value = _product.get_price();
 
@@ -342,7 +368,7 @@ function getPackageDetails(package, defaultSize, defaultWeight) {
 
   return pack;
 }
-
+ */
 function getMinDimension(width, length, height) {
   const dimensions = { width: width, length: length, height: height };
   const result = Object.keys(dimensions).reduce((a, b) => (dimensions[a] < dimensions[b] ? a : b));
@@ -354,11 +380,7 @@ function calculateShipping(package) {
     return;
   }
 
-  const pluginDirPath = '/path/to/your/plugin/directory/';
 
-  const CalculateMethod = require(pluginDirPath + 'includes/royalmail/Src/CalculateMethod');
-  const Data = require(pluginDirPath + 'includes/royalmail/Src/Data');
-  const Method = require(pluginDirPath + 'includes/royalmail/Src/Method');
 
   let packageDetails = getPackageDetailsByBoxpacker(package);
 
@@ -366,8 +388,6 @@ function calculateShipping(package) {
     packageDetails = getPackageDetails(package);
   }
 
-  debug('Settings: ', JSON.stringify(instanceSettings));
-  debug('Packing Details', packageDetails);
 
   const calculateMethodClass = new CalculateMethod();
   const dataClass = new Data(
@@ -444,3 +464,111 @@ function calculateShipping(package) {
     addRate(rate);
   });
 }
+
+function getPackageDetailsByBoxpacker(package) {
+  const default_length = package.default_size?.length || 1;
+  const default_width = package.default_size?.width || 1;
+  const default_height = package.default_size?.height || 1;
+
+  const packer = new Packer();
+
+  const boxes = getRoyalMailBoxes('small');
+  boxes.forEach((box) => {
+    // console.log("box", box);
+    packer.addBin(new Bin(box.reference, box.outer_length, box.outer_width, box.outer_depth, box.max_weight));
+  });
+  // console.log("package", packer.bins);
+  const pack = [];
+  let packs_count = 0;
+  let itemsQueue = [];
+  let storeItemsQueue = [];
+  package.contents.forEach((item) => {
+    const weight = item.weight;
+    const length = item.length;
+    const height = item.height;
+    const width = item.width;
+    const storeItem = new StoreItem().setDepth(height).setWidth(width).setLength(length).setWeight(weight).setPrice(item.price);
+    const itemInstance = new Item(item.code, width, length, height, weight)
+    // console.log("box item", itemInstance);
+    for (let i = 0; i < item.quantity; i++) {
+      itemsQueue.push(itemInstance);
+    }
+    storeItemsQueue.push(storeItem);
+  })
+  pack[packs_count] = {
+    weight: 0,
+    length: 0,
+    height: 0,
+    width: 0,
+    quantity: 0,
+    value: 0,
+  };
+  // console.log("itemsQueue", itemsQueue);
+  itemsQueue.forEach((item, index) => {
+
+    packer.addItem(item);
+
+  });
+
+  try {
+    packer.pack();
+    // console.log("packed boxes", packer);
+    packer.bins.forEach((bin) => {
+      // console.log("bin", bin.name);
+      // console.log("packer ready", bin.items);
+
+    })
+    /*  packedBoxes.forEach((packedBox) => {
+       pack[packs_count] = {
+         weight: packedBox.getWeight() / 1000,
+         length: packedBox.getUsedLength() / 10,
+         width: packedBox.getUsedWidth() / 10,
+         height: packedBox.getUsedDepth() / 10,
+         quantity: packedBox.getItems().length,
+         postcode: package.destination.postcode,
+         value: packedBox.getItems().reduce((carry, item) => {
+            carry += item.getPrice();
+            return carry;
+          }, 0), 
+       };
+       packs_count++;
+     }); */
+  } catch (e) {
+    return false;
+  }
+
+  return pack;
+}
+
+function getMaxWeight(package, total_weight) {
+  const country = package.destination.country;
+
+  const max_weights = {};
+
+  max_weights['own_package'] = country === 'GB' ? 30 : 2;
+
+  if (country === 'GB') {
+    if (total_weight <= 2 && this.parcel_size === 'small') {
+      return {
+        'own_package': 2,
+      };
+    } else {
+      return {
+        'own_package': 20,
+      };
+    }
+  } else {
+    return {
+      'own_package': max_weights['own_package'],
+    };
+  }
+}
+
+
+module.exports = {
+  getMinDimension,
+  calculateShipping,
+  getPackageDetailsByBoxpacker,
+  getPackageDetails
+}
+

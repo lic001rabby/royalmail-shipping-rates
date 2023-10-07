@@ -1,4 +1,4 @@
-export default class Box {
+class RoyalMailBox {
   constructor() {
     this.reference = null;
     this.outer_width = null;
@@ -96,3 +96,5 @@ export default class Box {
     return this;
   }
 }
+
+module.exports = RoyalMailBox;

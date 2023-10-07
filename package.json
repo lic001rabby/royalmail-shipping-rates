@@ -50,6 +50,7 @@
   ],
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "binpackingjs": "^3.0.2",
     "compression": "^1.7.4",
     "consola": "^3.2.3",
     "cors": "^2.8.5",

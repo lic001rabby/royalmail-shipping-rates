@@ -10,6 +10,15 @@ class CalculateMethod {
     this._csvDeliveryToPrice = 'src/csvdata/4_deliveryToPrice.csv';
     this._csvCleanNameToMethod = 'src/csvdata/5_cleanNameToMethod.csv';
     this._csvCleanNameMethodGroup = 'src/csvdata/6_cleanNameMethodGroup.csv';
+    this._allowedMethods = [
+      'Tracked 24',
+      'Tracked 48',
+      'International Economy',
+      'International Standard',
+      'International Tracked and Signed',
+      'International Tracked',
+      'International Signed',
+    ];
   }
 
   /**
@@ -57,8 +66,15 @@ class CalculateMethod {
 
       results.push(method);
     });
-
     return results;
+    // return only the ones where shishippingMethodNameClean contains any substring from this._allowedMethods
+    /*     return results.filter((item) => {
+          return this._allowedMethods.some((allowedMethod) => {
+            console.log(allowedMethod + ':' + item.shippingMethodNameClean + ':' + item.shippingMethodName);
+    
+            return item.shippingMethodNameClean.includes(allowedMethod);
+          });
+        }); */
   }
 }
 
