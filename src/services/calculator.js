@@ -32,7 +32,7 @@ function getPackageDetails(package) {
     const length = item.length;
     const height = item.height;
     const width = item.width;
-    const minDimension = Math.min(width, length, height);
+    const minDimension = getMinDimension(width, length, height);
     const item_id = item.code;
     products.push({
       weight: item.weight,
@@ -78,7 +78,7 @@ function getPackageDetails(package) {
       packs[packsCount].width = product.min_dimension === 'width' ? packs[packsCount].width + product.width : product.width;
       packs[packsCount].item_id = product.item_id;
       packs[packsCount].quantity += 1;
-      packs[packsCount].value += product.value;
+      packs[packsCount].value = 0;
       const packageHeight = Math.min(packs[packsCount].width, packs[packsCount].length, packs[packsCount].height);
 
       if (packs[packsCount].weight > maxWeight) {

@@ -2837,6 +2837,11 @@
   "resolved" "https://registry.npmjs.org/forwarded/-/forwarded-0.2.0.tgz"
   "version" "0.2.0"
 
+"foxy-shipping-endpoint@^1.1.0":
+  "integrity" "sha512-wkJmdHK5Rtspl4PTpxi5YEsfi4qYDiOcuexzXyAbeBlEUkv7K0FPzxc8FSKYxqy8thKMABmBqI3LR7/Ua5+TSg=="
+  "resolved" "https://registry.npmjs.org/foxy-shipping-endpoint/-/foxy-shipping-endpoint-1.1.0.tgz"
+  "version" "1.1.0"
+
 "fragment-cache@^0.2.1":
   "integrity" "sha1-QpD60n8T6Jvn8zeZxrxaCr//DRk="
   "resolved" "https://registry.npmjs.org/fragment-cache/-/fragment-cache-0.2.1.tgz"

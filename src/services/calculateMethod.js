@@ -66,6 +66,8 @@ class CalculateMethod {
 
       results.push(method);
     });
+
+    console.log('important', results[0]);
     return results;
     // return only the ones where shishippingMethodNameClean contains any substring from this._allowedMethods
     /*     return results.filter((item) => {

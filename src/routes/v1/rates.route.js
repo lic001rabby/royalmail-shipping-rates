@@ -1,11 +1,39 @@
 /* eslint-disable camelcase */
 const express = require('express');
 const CalculateMethod = require('../../services/calculateMethod');
+var ShippingResponse = require('foxy-shipping-endpoint');
 const { calculateShipping, getPackageDetailsByBoxpacker, getPackageDetails } = require('../../services/calculator');
 
 const router = express.Router();
 
 const { createConsola } = require('consola');
+const { forEach } = require('../../config/logger');
+
+const allowedMethods = {
+  UK: [
+    'UK_STANDARD_FIRST_CLASS_LETTER',
+    'UK_STANDARD_FIRST_CLASS_LARGE_LETTER',
+    'UK_STANDARD_FIRST_CLASS_SMALL_PARCEL',
+    'UK_STANDARD_FIRST_CLASS_MEDIUM_PARCEL',
+    'UK_STANDARD_SECOND_CLASS_LETTER',
+    'UK_STANDARD_SECOND_CLASS_LARGE_LETTER',
+    'UK_STANDARD_SECOND_CLASS_SMALL_PARCEL',
+    'UK_STANDARD_SECOND_CLASS_MEDIUM_PARCEL',
+    'UK_TRACKED_24_LARGE_LETTER',
+    'UK_TRACKED_24_MEDIUM_PARCEL',
+    'UK_TRACKED_24_SMALL_PARCEL',
+    'UK_TRACKED_48_LARGE_LETTER',
+    'UK_TRACKED_48_MEDIUM_PARCEL',
+    'UK_TRACKED_48_SMALL_PARCEL',
+  ],
+  INTERNATIONAL: [
+    'INTERNATIONAL_ECONOMY',
+    'INTERNATIONAL_TRACKED_AND_SIGNED',
+    'INTERNATIONAL_TRACKED',
+    'INTERNATIONAL_SIGNED',
+    'INTERNATIONAL_STANDARD',
+  ],
+};
 
 const logger = createConsola({
   // level: 4,
@@ -20,6 +48,24 @@ const logger = createConsola({
 function sortRates(a, b) {
   if (a.cost === b.cost) return 0;
   return a.cost < b.cost ? -1 : 1;
+}
+function filterAllowedMethods(methods) {
+  console.log(methods);
+  const filteredMethods = methods.filter((item) => {
+    if (item.countryCode === 'GB' && allowedMethods.UK.includes(item.shippingMethodName)) return true;
+
+    // check if the shippingMethodName partially matches any of the items in the allowedMethods.INTERNATIONAL array
+    if (
+      item.countryCode !== 'GB' &&
+      allowedMethods.INTERNATIONAL.some((method) => {
+        return item.shippingMethodName.includes(method);
+      })
+    ) {
+      return true;
+    }
+    return false;
+  });
+  return filteredMethods;
 }
 
 const createPackage = (packageDetails) => {
@@ -40,6 +86,7 @@ const getMethods = async (boxes) => {
   return calculatedMethods.getMethods(country, value, weight);
 };
 const prepareShipping = async (cartObject) => {
+  let shippingRates = new ShippingResponse(cartObject);
   const items = cartObject._embedded['fx:items'];
   const packages = items.map((item) => {
     return createPackage(item);
@@ -80,7 +127,7 @@ const prepareShipping = async (cartObject) => {
         const price = Number(methodItem.methodPrice);
         if (!rates[methodItem.shippingMethodName]) {
           rates[methodItem.shippingMethodName] = {};
-          rates[methodItem.shippingMethodName].method = methodItem.shippingMethodName;
+          rates[methodItem.shippingMethodName].shippingMethodName = methodItem.shippingMethodName;
           rates[methodItem.shippingMethodName].service_id = methodItem.id;
           rates[methodItem.shippingMethodName].service_name = methodItem.shippingMethodNameClean;
           rates[methodItem.shippingMethodName].cost = price;
@@ -94,12 +141,14 @@ const prepareShipping = async (cartObject) => {
 
   logger.info('Shipping results', shipping_results);
 
-  const sortedRates = Object.values(rates)
+  let sortedRates = Object.values(rates)
     .sort(sortRates)
     .filter((item) => {
       return item.multiple === true;
     });
   logger.info('Shipping results rates', sortedRates);
+  sortedRates = filterAllowedMethods(sortedRates);
+  shipping_results = filterAllowedMethods(shipping_results);
   const formattedResults = shipping_results.map((item) => {
     return {
       service_id: item.id,
@@ -108,22 +157,43 @@ const prepareShipping = async (cartObject) => {
       service_name: item.shippingMethodNameClean,
     };
   });
-  const responseObject = {
+  formattedResults.forEach(item => {
+    if (alt_boxes.length === 1 && alt_boxes[0].size === 'small' && item.service_name.includes('Medium')) {
+
+    } else shippingRates.add(item.service_id, item.price, item.method, item.service_name);
+  });
+  if (alt_boxes.length === 1) {
+    console.log('size', alt_boxes[0].size);
+    if (alt_boxes[0].size === 'small') {
+      shippingRates.hide('Medium');
+      shippingRates.hide('Medium Parcel');
+    }
+  }
+  logger.info('ShippingRates', shippingRates);
+  //logger.info('Shipping results', formattedResults);
+  let responseObject = {
     ok: true,
     data: {
       shipping_results:
         alt_boxes.length === 1
-          ? formattedResults
+          ? shippingRates.rates
           : sortedRates.map((item) => {
             return {
               service_id: item.service_id,
               price: Number(item.cost).toFixed(2),
-              method: item.method,
+              method: item.shippingMethodName,
               service_name: item.service_name,
             };
           }),
     },
   };
+  if (formattedResults.length === 0 && sortedRates.length === 0) {
+    responseObject = {
+      ok: false,
+      details:
+        'Sorry, no shipping method is currently available for one or more items in your order. Please contact support.',
+    };
+  }
   return responseObject;
 };
 

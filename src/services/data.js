@@ -136,8 +136,12 @@ class RoyalMailData {
     // console.log('mappingCountryToZone', mappingCountryToZone, country_code);
     // Get All array items that match the country code
     const countryCodeData = [];
+    //console.log('mappingCountryToZone', mappingCountryToZone);
     mappingCountryToZone.forEach((item) => {
+      if (country_code === 'GB' && item[1] !== 'WORLD_ZONE_GB') return;
+      console.log('mappingCountryToZone item', item);
       if (item[this.COUNTRY_CODE] === country_code) {
+
         item.forEach((keys) => {
           countryCodeData.push(keys);
         });
@@ -244,7 +248,10 @@ class RoyalMailData {
           mappingDeliveryToPrice.forEach((item) => {
 
             if (item[this.SHIPPING_METHOD] === methodData[0]) {
-              if (package_weight >= Number(item[this.METHOD_MIN_WEIGHT]) && package_weight <= item[this.METHOD_MAX_WEIGHT]) {
+              if (
+                package_weight >= Number(item[this.METHOD_MIN_WEIGHT]) &&
+                package_weight <= Number(item[this.METHOD_MAX_WEIGHT])
+              ) {
                 const resultArray = {
                   shippingMethodName: item[this.SHIPPING_METHOD],
                   minimumWeight: item[this.METHOD_MIN_WEIGHT],
