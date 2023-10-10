@@ -159,7 +159,6 @@ const prepareShipping = async (cartObject) => {
   });
   formattedResults.forEach(item => {
     if (alt_boxes.length === 1 && alt_boxes[0].size === 'small' && item.service_name.includes('Medium')) {
-
     } else shippingRates.add(item.service_id, item.price, item.method, item.service_name);
   });
   if (alt_boxes.length === 1) {
