@@ -25,6 +25,7 @@ const calculateTax = async (cartObject) => {
     };
   });
   amountWithTax.details.forEach((tax, index) => {
+
     if (index === 0) taxResponse.name = tax.type.toUpperCase();
     else taxResponse.name = `${taxResponse.name}, ${tax.type.toUpperCase()}`;
   });
