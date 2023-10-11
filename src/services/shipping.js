@@ -3,6 +3,7 @@ var ShippingResponse = require('foxy-shipping-endpoint');
 const { calculateShipping, getPackageDetailsByBoxpacker, getPackageDetails } = require('./calculator');
 const { createConsola } = require('consola');
 
+
 const allowedMethods = {
   UK: [
     'UK_STANDARD_FIRST_CLASS_LETTER',
@@ -80,7 +81,8 @@ const getMethods = async (boxes) => {
   return calculatedMethods.getMethods(country, value, weight);
 };
 const prepareShipping = async (cartObject) => {
-  let shippingRates = new ShippingResponse(cartObject);
+  //let shippingRates = new ShippingResponse(cartObject);
+  logger.info('Prepare cart', cartObject);
   const items = cartObject._embedded['fx:items'];
   const packages = items.map((item) => {
     return createPackage(item);
@@ -89,7 +91,7 @@ const prepareShipping = async (cartObject) => {
   const boxes = getPackageDetailsByBoxpacker({ contents: packages });
 
   logger.success('Prepare boxes', boxes);
-  const { origin_postal_code, item_count, total_weight } = cartObject._embedded['fx:shipment'];
+  const { total_weight } = cartObject._embedded['fx:shipment'];
   const { shipping_country, shipping_city, shipping_state, shipping_postal_code, total_order } = cartObject;
   logger.info('Prepare shipping', items);
 
@@ -151,17 +153,12 @@ const prepareShipping = async (cartObject) => {
       service_name: item.shippingMethodNameClean,
     };
   });
-  formattedResults.forEach(item => {
+  let shippingRates = [];
+  formattedResults.forEach((item) => {
     if (alt_boxes.length === 1 && alt_boxes[0].size === 'small' && item.service_name.includes('Medium')) {
-    } else shippingRates.add(item.service_id, item.price, item.method, item.service_name);
+    } else shippingRates.push(item);
   });
-  if (alt_boxes.length === 1) {
-    console.log('size', alt_boxes[0].size);
-    if (alt_boxes[0].size === 'small') {
-      shippingRates.hide('Medium');
-      shippingRates.hide('Medium Parcel');
-    }
-  }
+
   logger.info('ShippingRates', shippingRates);
   //logger.info('Shipping results', formattedResults);
   let responseObject = {
@@ -169,7 +166,7 @@ const prepareShipping = async (cartObject) => {
     data: {
       shipping_results:
         alt_boxes.length === 1
-          ? shippingRates.rates
+          ? shippingRates
           : sortedRates.map((item) => {
             return {
               service_id: item.service_id,

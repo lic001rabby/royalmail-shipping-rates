@@ -23,6 +23,7 @@ const envVarsSchema = Joi.object()
     SMTP_USERNAME: Joi.string().description('username for email server'),
     SMTP_PASSWORD: Joi.string().description('password for email server'),
     EMAIL_FROM: Joi.string().description('the from field in the emails sent by the app'),
+    ROYALMAIL_KEY: Joi.string().description('royal mail api key'),
   })
   .unknown();
 
@@ -35,14 +36,7 @@ if (error) {
 module.exports = {
   env: envVars.NODE_ENV,
   port: envVars.PORT,
-  mongoose: {
-    url: envVars.MONGODB_URL + (envVars.NODE_ENV === 'test' ? '-test' : ''),
-    options: {
-      useCreateIndex: true,
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    },
-  },
+
   jwt: {
     secret: envVars.JWT_SECRET,
     accessExpirationMinutes: envVars.JWT_ACCESS_EXPIRATION_MINUTES,
@@ -60,5 +54,8 @@ module.exports = {
       },
     },
     from: envVars.EMAIL_FROM,
+  },
+  royalmail: {
+    key: envVars.ROYALMAIL_KEY,
   },
 };

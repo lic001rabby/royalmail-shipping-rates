@@ -2,6 +2,7 @@ const express = require('express');
 
 const docsRoute = require('./docs.route');
 const ratesRoute = require('./rates.route');
+const paecelRoute = require('./parcel.route');
 const config = require('../../config/config');
 
 const router = express.Router();
@@ -10,6 +11,10 @@ const defaultRoutes = [
   {
     path: '/rates',
     route: ratesRoute,
+  },
+  {
+    path: '/parcel',
+    route: paecelRoute,
   },
 ];
 
