@@ -22,7 +22,6 @@ const logger = createConsola({
 router
   .route('/')
   .get((req, res) => {
-    logger.info(req.body);
     res.send('what did you get?');
   })
   .post(async (req, res) => {

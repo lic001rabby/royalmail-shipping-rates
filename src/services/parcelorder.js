@@ -3,7 +3,7 @@ const { createConsola } = require('consola');
 const fetch = require('node-fetch');
 const config = require('../config/config');
 
-let responseObject = {
+const responseObject = {
   items: [
     {
       orderReference: 'test2',
@@ -47,7 +47,6 @@ let responseObject = {
         {
           weightInGrams: 1200,
           packageFormatIdentifier: 'smallParcel',
-          customPackageFormatIdentifier: 'string',
           contents: [
             {
               name: 'string',
@@ -93,63 +92,98 @@ const logger = createConsola({
     date: false,
   },
 });
-
-const preparePackage = (orderObject) => {
-  const { id, customer_first_name, customer_last_name, customer_email, total_item_price, total_shipping, total_order, date_created } = orderObject;
-  items.forEach((item) => {
-    item.orderReference = id;
-    item.recipient = {
-      address: {
-        fullName: `${customer_first_name} ${customer_last_name}`,
-        companyName: 'string',
-        addressLine1: 'string',
-        addressLine2: 'string',
-        addressLine3: 'string',
-        city: 'string',
-        county: 'string',
-        postcode: 'string',
-        countryCode: 'GB',
-      },
-      phoneNumber: 'string',
-      emailAddress: customer_email,
-      addressBookReference: 'string',
-    };
-    item.sender = {
-      tradingName: 'string',
-      phoneNumber: 'string',
-    };
-    item.billing = {
-      address: {
-        fullName: `${customer_first_name} ${customer_last_name}`,
-        companyName: 'string',
-        addressLine1: 'string',
-        addressLine2: 'string',
-        addressLine3: 'string',
-        city: 'string',
-        county: 'string',
-        postcode: 'string',
-        countryCode: 'GB',
-      },
-      phoneNumber: 'string',
-      emailAddress: customer_email,
-    };
-    item.subtotal = total_item_price;
-    item.shippingCostCharged = total_shipping;
-    item.total = total_order;
+const addItems = (orderObject) => {
+  const packageItems = [];
+  orderObject._embedded['fx:items'].forEach((item) => {
+    if (item._embedded['fx:item_category'].code === 'shipped_products')
+      packageItems.push({
+        name: item.name,
+        SKU: item.code,
+        quantity: item.quantity,
+        unitValue: item.price,
+        unitWeightInGrams: item.weight * 1000,
+      });
   });
-  logger.info('orderObject', orderObject);
-  return responseObject;
+  return packageItems;
+};
+const getAddress = (addressObject) => {
+  return {
+    fullName: `${addressObject.first_name} ${addressObject.last_name}`,
+    companyName: addressObject.company,
+    addressLine1: addressObject.address1,
+    addressLine2: addressObject.address2,
+    city: addressObject.city,
+    county: addressObject.region,
+    postcode: addressObject.customer_postal_code || addressObject.postal_code,
+    countryCode: addressObject.customer_country || addressObject.country,
+  };
 };
 
-const createOrder = async (orderBody) => {
-  const shippingPackage = JSON.stringify(preparePackage(orderBody));
-  logger.info('shippingPackage', shippingPackage);
+const getPackageSize = (addressObject) => {
+  const shippingServiceName = addressObject.shipping_service_description;
+  let packageSize = 'undefined';
+  if (shippingServiceName.includes('Small Parcel')) {
+    packageSize = 'smallParcel';
+  } else if (shippingServiceName.includes('Medium Parcel')) {
+    packageSize = 'mediumParcel';
+  } else if (shippingServiceName.includes('Large Letter')) {
+    packageSize = 'largeLetter';
+  }
+  return packageSize;
+};
+
+const preparePackage = (orderObject) => {
+  const { id, total_item_price, total_tax, total_shipping, total_order, customer_email, date_created } = orderObject;
+  
+  logger.info('orderObject', orderObject._embedded['fx:billing_addresses']);
+  const packageItems = addItems(orderObject);
+  const billingAddress = getAddress(orderObject._embedded['fx:billing_addresses'][0]);
+  const shippingAddress = getAddress(orderObject._embedded['fx:shipments'][0]);
+  const packageSize = getPackageSize(orderObject._embedded['fx:shipments'][0]);
+  responseObject.items[0].recipient.address = shippingAddress;
+  let totalWeight = 0;
+  packageItems.forEach((item) => {
+    console.log(item);
+    totalWeight += item.unitWeightInGrams;
+  });
+  const item = {
+    recipient: {
+      address: shippingAddress,
+      emailAddress: customer_email,
+    },
+    billing: {
+      address: billingAddress,
+      emailAddress: customer_email,
+    },
+    packages: [
+      {
+        weightInGrams: totalWeight + 150,
+        packageFormatIdentifier: packageSize,
+        contents: packageItems,
+      },
+    ],
+    orderDate: date_created,
+    subtotal: total_item_price,
+    shippingCostCharged: total_shipping,
+    total: total_order,
+    currencyCode: 'GBP',
+    orderTax: total_tax,
+    orderReference: id,
+  }
+
+
+
+  responseObject.items[0] = item;
+  console.log(responseObject);
+  return responseObject;
+}; 
+    const createOrder = async (orderBody) => {
+    const shippingPackage = JSON.stringify(preparePackage(orderBody));
   const rmResponse = await fetch('https://api.parcel.royalmail.com/api/v1/orders', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${config.royalmail.key}` },
     body: shippingPackage,
   });
-  logger.info('responseObject', rmResponse);
   return rmResponse;
 };
 
