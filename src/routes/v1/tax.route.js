@@ -3,13 +3,13 @@ const express = require('express');
 
 const { createConsola } = require('consola');
 
-const { prepareShipping } = require('../../services/shipping');
+const { calculateTax } = require('../../services/taxes');
 
 const router = express.Router();
 
 const logger = createConsola({
   // level: 4,
-  // fancy: true | false
+  fancy: true,
   formatOptions: {
     columns: 80,
     colors: true,
@@ -25,8 +25,8 @@ router
     res.send('what did you get?');
   })
   .post(async (req, res) => {
-    logger.info(req.body);
-    const resObject = await prepareShipping(req.body);
+    const resObject = await calculateTax(req.body);
+    logger.info('TAX', resObject);
     res.send(resObject);
   });
 

@@ -45,7 +45,6 @@ function sortRates(a, b) {
   return a.cost < b.cost ? -1 : 1;
 }
 function filterAllowedMethods(methods) {
-  console.log(methods);
   const filteredMethods = methods.filter((item) => {
     if (item.countryCode === 'GB' && allowedMethods.UK.includes(item.shippingMethodName)) return true;
 
@@ -82,7 +81,7 @@ const getMethods = async (boxes) => {
 };
 const prepareShipping = async (cartObject) => {
   //let shippingRates = new ShippingResponse(cartObject);
-  logger.info('Prepare cart', cartObject);
+
   const items = cartObject._embedded['fx:items'];
   const packages = items.map((item) => {
     return createPackage(item);
@@ -135,14 +134,12 @@ const prepareShipping = async (cartObject) => {
     }
   }
 
-  logger.info('Shipping results', shipping_results);
-
   let sortedRates = Object.values(rates)
     .sort(sortRates)
     .filter((item) => {
       return item.multiple === true;
     });
-  logger.info('Shipping results rates', sortedRates);
+  // logger.info('Shipping results rates', sortedRates);
   sortedRates = filterAllowedMethods(sortedRates);
   shipping_results = filterAllowedMethods(shipping_results);
   const formattedResults = shipping_results.map((item) => {
@@ -159,7 +156,7 @@ const prepareShipping = async (cartObject) => {
     } else shippingRates.push(item);
   });
 
-  logger.info('ShippingRates', shippingRates);
+  // logger.info('ShippingRates', shippingRates);
   //logger.info('Shipping results', formattedResults);
   let responseObject = {
     ok: true,
