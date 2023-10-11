@@ -3,7 +3,7 @@ const { createConsola } = require('consola');
 const fetch = require('node-fetch');
 const config = require('../config/config');
 
-const responseObject = {
+let responseObject = {
   items: [
     {
       orderReference: 'test2',
@@ -95,6 +95,48 @@ const logger = createConsola({
 });
 
 const preparePackage = (orderObject) => {
+  const { id, customer_first_name, customer_last_name, customer_email, total_item_price, total_shipping, total_order, date_created } = orderObject;
+  items.forEach((item) => {
+    item.orderReference = id;
+    item.recipient = {
+      address: {
+        fullName: `${customer_first_name} ${customer_last_name}`,
+        companyName: 'string',
+        addressLine1: 'string',
+        addressLine2: 'string',
+        addressLine3: 'string',
+        city: 'string',
+        county: 'string',
+        postcode: 'string',
+        countryCode: 'GB',
+      },
+      phoneNumber: 'string',
+      emailAddress: customer_email,
+      addressBookReference: 'string',
+    };
+    item.sender = {
+      tradingName: 'string',
+      phoneNumber: 'string',
+    };
+    item.billing = {
+      address: {
+        fullName: `${customer_first_name} ${customer_last_name}`,
+        companyName: 'string',
+        addressLine1: 'string',
+        addressLine2: 'string',
+        addressLine3: 'string',
+        city: 'string',
+        county: 'string',
+        postcode: 'string',
+        countryCode: 'GB',
+      },
+      phoneNumber: 'string',
+      emailAddress: customer_email,
+    };
+    item.subtotal = total_item_price;
+    item.shippingCostCharged = total_shipping;
+    item.total = total_order;
+  });
   logger.info('orderObject', orderObject);
   return responseObject;
 };
@@ -114,4 +156,3 @@ const createOrder = async (orderBody) => {
 module.exports = {
   createOrder,
 };
-
